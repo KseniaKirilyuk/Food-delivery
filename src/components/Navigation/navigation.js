@@ -1,14 +1,15 @@
 import React from 'react';
 
-const Navigation = (props) => {
+const Navigation = ({ restaurants, onRestaurantClick }) => {
   return (
     <div>
-      {props.restaurants.map((item) => (
-        <button key={item.id} onClick={() => props.onRestaurantClick(item.id)}>
-          {item.name}
+      {restaurants.map(({ id, name }) => (
+        <button key={id} onClick={() => onRestaurantClick(id)}>
+          {name}
         </button>
       ))}
     </div>
   );
 };
 export default Navigation;
+//TODO useCallBack for onRestaurantClick
