@@ -1,6 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Rate = (props) => {
-  return <div>{props.rate}</div>;
+const Rate = ({ rate }) => {
+  return <div>{rate}</div>;
+};
+
+Rate.propTypes = {
+  rate: PropTypes.number.isRequired,
 };
 export default Rate;

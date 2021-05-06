@@ -1,5 +1,7 @@
 import React from 'react';
 import Review from './Review';
+import PropTypes from 'prop-types';
+
 const Reviews = ({ reviews }) => {
   return (
     <div>
@@ -8,5 +10,12 @@ const Reviews = ({ reviews }) => {
       ))}
     </div>
   );
+};
+Reviews.propTypes = {
+  reviews: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequered,
+    }).isRequired
+  ).isRequired,
 };
 export default Reviews;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Navigation = ({ restaurants, onRestaurantClick }) => {
   return (
@@ -10,6 +11,16 @@ const Navigation = ({ restaurants, onRestaurantClick }) => {
       ))}
     </div>
   );
+};
+
+Navigation.propTypes = {
+  restaurants: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+  onRestaurantClick: PropTypes.func.isRequired,
 };
 export default Navigation;
 //TODO useCallBack for onRestaurantClick

@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 const Button = ({ amount, onButtonClick }) => {
   return (
     <div>
@@ -7,5 +9,11 @@ const Button = ({ amount, onButtonClick }) => {
       <button onClick={onButtonClick.increment}> + </button>
     </div>
   );
+};
+
+Button.propTypes = {
+  decrement: PropTypes.func,
+  increment: PropTypes.func,
+  amount: PropTypes.number,
 };
 export default Button;
