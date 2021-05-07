@@ -12,8 +12,10 @@ const Review = ({ user, text, rating }) => {
   );
 };
 Review.propTypes = {
-  user: PropTypes.string,
   test: PropTypes.string,
   rating: PropTypes.number.isRequired,
+};
+Review.defaultProps = {
+  user: 'Anonymous',
 };
 export default Review;
