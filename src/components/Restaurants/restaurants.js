@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Navigation from '../Navigation';
 import Restaurant from '../Restaurant';
@@ -26,4 +27,7 @@ Restaurants.propTypes = {
     }).isRequired
   ).isRequired,
 };
-export default Restaurants;
+
+export default connect((state) => ({
+  restaurants: state.restaurants,
+}))(Restaurants);

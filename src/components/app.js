@@ -4,7 +4,7 @@ import Restaurants from '../components/Restaurants';
 
 export default class App extends PureComponent {
   render() {
-    return <Restaurants restaurants={this.props.restaurants} />;
+    return <Restaurants />;
   }
 }
 App.propTypes = {

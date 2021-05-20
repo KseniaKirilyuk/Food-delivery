@@ -1,7 +1,7 @@
 import { INCREMENT, DECREMENT } from '../constants';
 
 export default (state = {}, action) => {
-  console.log('STATE FROM PRDER REDUCER', state);
+  console.log('STATE FROM ORDER REDUCER', state);
   const { type, id } = action;
   switch (type) {
     case INCREMENT:

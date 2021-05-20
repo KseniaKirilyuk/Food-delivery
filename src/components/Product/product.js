@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { increment, decrement } from '../../redux/actions';
 import PropTypes from 'prop-types';
 import Button from '../Button';
-import useAmount from '../../hooks/use-amount';
+
+//import useAmount from '../../hooks/use-amount';
 
 const Product = ({ product, amount, increment, decrement }) => {
   //const { decrement, increment, amount } = useAmount(0);
@@ -12,9 +13,11 @@ const Product = ({ product, amount, increment, decrement }) => {
 
   return (
     <div>
-      {product.name}
-      <div>${product.price}</div>
-      <Button amount={amount} onButtonClick={{ decrement, increment }} />
+      <div>
+        {product.name}
+        <div>${product.price}</div>
+        <Button amount={amount} onButtonClick={{ decrement, increment }} />
+      </div>
     </div>
   );
 };
